@@ -19,9 +19,13 @@ public class Villagers : MonoBehaviour
     void Start()
     {
         speed = 100f;
+        
         Rb = GetComponent<Rigidbody2D>();
+        
         startWalking = false;
+
         StartCoroutine(ToggleStartWalking());
+        
     }
 
     // Update is called once per frame
@@ -41,10 +45,10 @@ public class Villagers : MonoBehaviour
     {
         positionX = transform.position.x;
 
-        if (positionX > maximumX)
+        if (positionX >= maximumX)
         {
             speed *= -1;
-        } else if (positionX < minimumX)
+        } else if (positionX <= minimumX)
         {
             speed *= -1;
         }
@@ -72,6 +76,15 @@ public class Villagers : MonoBehaviour
             direction = GenerateRandomNumber("direction");
 
             yield return new WaitForSeconds(secondsToWait);
+
+            if (direction == 1 && transform.position.x < maximumX)
+            {
+                direction = 1;
+            }
+            else
+            {
+                direction = 0;
+            }
 
             // Initializing the direction of the movement
             if (direction == 1)
@@ -119,7 +132,7 @@ public class Villagers : MonoBehaviour
         // Makes sure the player can't push NPC's
         if (collision.collider.name == "Player")
         {
-            Rb.isKinematic = true;
+            Rb.isKinematic = false;
         }
     }
 }

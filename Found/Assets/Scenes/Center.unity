@@ -5344,7 +5344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600616214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.58, y: 27.448647, z: 1}
+  m_LocalPosition: {x: 33.58, y: 27.385, z: 1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 704035690}
@@ -5371,7 +5371,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &600616217
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5743,7 +5743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850326492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 93.38, y: 18.758646, z: 1}
+  m_LocalPosition: {x: 93.38, y: 18.577, z: 1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 8084701}
@@ -5770,7 +5770,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &850326495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5919,10 +5919,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 71903f53e2933a8439b9b31602f2adc4, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 3
@@ -6566,7 +6566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221010524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.04, y: 27.448647, z: 1}
+  m_LocalPosition: {x: 53.04, y: 27.376, z: 1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 865748906}
@@ -6593,7 +6593,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &1221010527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7017,7 +7017,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &1380143921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7102,7 +7102,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380143919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.53, y: -1.9413548, z: 1}
+  m_LocalPosition: {x: 18.53, y: -2.114, z: 1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 694709363}
@@ -7139,7 +7139,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 858221084}
   dialogueCanvas: {fileID: 611167956}
-  dialogues: []
+  dialogues:
+  - 'Hi, there! I''m the mayor of New Moon. '
+  - 'I have a very important task for you. '
+  - You have probably noticed already that there's a door over there.
+  - Behind that door lies the yet unknown meaning of life.
+  - You seem to me like a curious type of person. Find out what is behind that door.
+  - You can open the door when you have gathered 6 keys, which you can get from the
+    local villagers of New Moon.
+  - 'Talk to them and get in their minds. Get to know about their past, intentions
+    and norms. '
+  - Then you'll get a key and when you have enough of them, you can open this door.
+  - As I am a civilian as well, you better start getting in my mind first!
   player: {fileID: 1646001965}
 --- !u!1 &1419464448
 GameObject:
@@ -7811,7 +7822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662803856}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 20.358646, z: 1}
+  m_LocalPosition: {x: 0.3, y: 20.03, z: 1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 1378541032}
@@ -7838,7 +7849,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &1662803859
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8283,7 +8294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815765719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.2, y: 5.4386463, z: 1}
+  m_LocalPosition: {x: 41.2, y: 5.267, z: 1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 1419464449}
@@ -8310,7 +8321,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!61 &1815765722
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8819,7 +8830,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: ea6e9966519411f4786dfb3f1e2a6625, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

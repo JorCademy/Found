@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -49,6 +50,25 @@ public class Player : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.W) && extraJump == 0 && isGrounded == true)
         {
             Rb.velocity = Vector2.up * jumpForce;
+        }
+
+        if (SceneManager.GetActiveScene().name != "Scenes/Center")
+        {
+            if (transform.position.y <= -7.5)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.name == "Key")
+        {
+            if (SceneManager.GetActiveScene().name != "Scenes/Center")
+            {
+                SceneManager.LoadScene("Scenes/Center");
+            }
         }
     }
 }

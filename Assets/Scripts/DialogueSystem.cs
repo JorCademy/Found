@@ -95,7 +95,19 @@ public class DialogueSystem : MonoBehaviour
             iterator = 0;
 
             // Initializing the text the player sees when it is near the NPC
-            dialogueDisplayed = "Press Space to talk.";
+            if (readyForLevel == false)
+            {
+                dialogueDisplayed = "Press Space to talk.";
+            } else
+            {
+                if (gameObject.name == "Mayor")
+                {
+                    dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in the " + gameObject.name + "'s mind.";
+                } else
+                {
+                    dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in " + gameObject.name + "'s mind.";
+                }
+            }
 
             characterKit.SetActive(true);
 

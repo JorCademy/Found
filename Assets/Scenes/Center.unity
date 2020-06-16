@@ -6081,7 +6081,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.7778313e-38, y: 1.8e-44, z: 3.642e-42, w: 1.04e-43}
+  m_BoundingSphereOverride: {x: 4.25e-43, y: -7.365711, z: 4.25e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9555,10 +9555,10 @@ MonoBehaviour:
   - Wow, I don't know you, but I'm really glad to see you!
   - 'Being outside is nice, I really need a distraction. Especially now...  '
   - 'But the thing is that I barely see anyone when I''m outdoors. '
-  - Wait, a minute. You're the guy who's trying to open the mysterious door, right?!
+  - Wait a minute. You're the guy who's trying to open the mysterious door, right?!
   - No time to lose then! You can get in my mind and earn another key.
   player: {fileID: 1646001965}
-  nextLevel: 
+  nextLevel: MaryLevel
 --- !u!1 &1816496679
 GameObject:
   m_ObjectHideFlags: 0

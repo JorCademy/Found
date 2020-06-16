@@ -353,6 +353,7 @@ MonoBehaviour:
   interactingObject: {fileID: 101049325}
   movementSpeed: 10
   startMoving: 0
+  distanceDown: 20
 --- !u!1 &302948537
 GameObject:
   m_ObjectHideFlags: 0

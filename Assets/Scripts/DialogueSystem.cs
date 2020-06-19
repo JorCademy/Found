@@ -20,6 +20,9 @@ public class DialogueSystem : MonoBehaviour
     private int iterator;
     private bool readyForLevel;
     public string nextLevel;
+    private int amountOfKeys;
+    public int npcRank;
+    public string succeededLevelMessage;
     
     // Start is called before the first frame update
     void Start()
@@ -40,14 +43,26 @@ public class DialogueSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Receiving the amount of keys stored in memory
+        amountOfKeys = PlayerPrefs.GetInt("Keys", 0);
+        Debug.Log(amountOfKeys);
+
         // Determining the player position
         playerPosition = player.transform.position;
 
         // Making sure the text is displayed
-        dialogueText.text = dialogueDisplayed;
+        if (npcRank > amountOfKeys)
+        {
+            dialogueText.text = dialogueDisplayed;
+        }
 
         // Checking when space is pressed for starting conversation
-        if (spacePressed == true)
+        if (npcRank <= amountOfKeys)
+        {
+            dialogueText.text = succeededLevelMessage;
+        } 
+
+        if (spacePressed == true && npcRank > amountOfKeys)
         {
             // Making sure that the player sees the dialogues
             characterKit.SetActive(true);
@@ -81,9 +96,14 @@ public class DialogueSystem : MonoBehaviour
         }
 
         // Making sure that the player can start the level when the conversation has taken place
-        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, playerPosition) < 3)
+        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, playerPosition) < 3 && npcRank > amountOfKeys)
         {
             SceneManager.LoadScene("Scenes/" + nextLevel);
+        }
+
+        if (npcRank <= amountOfKeys)
+        {
+            spacePressed = false;
         }
 
         // Making sure that the text disappears when there is no conversation anymore
@@ -95,17 +115,22 @@ public class DialogueSystem : MonoBehaviour
             iterator = 0;
 
             // Initializing the text the player sees when it is near the NPC
-            if (readyForLevel == false)
+            if (npcRank > amountOfKeys)
             {
-                dialogueDisplayed = "Press Space to talk.";
-            } else
-            {
-                if (gameObject.name == "Mayor")
+                if (readyForLevel == false)
                 {
-                    dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in the " + gameObject.name + "'s mind.";
-                } else
+                    dialogueDisplayed = "Press Space to talk.";
+                }
+                else
                 {
-                    dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in " + gameObject.name + "'s mind.";
+                    if (gameObject.name == "Mayor")
+                    {
+                        dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in the " + gameObject.name + "'s mind.";
+                    }
+                    else
+                    {
+                        dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in " + gameObject.name + "'s mind.";
+                    }
                 }
             }
 

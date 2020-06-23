@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MaryLevel.unity
     guid: 30eb0b68841ff5242bafcbcff256a507
+  - enabled: 1
+    path: Assets/Scenes/JohnLevel.unity
+    guid: 173e0abf754bf88448a8b85e62d025f3
   m_configObjects: {}

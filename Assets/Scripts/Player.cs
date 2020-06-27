@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public float deadLevel;
 
     public int extraJump;
     public int extraJumpValue;
@@ -21,7 +22,10 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+
         extraJump = extraJumpValue;
+
         Rb = GetComponent<Rigidbody2D>();
     }
 
@@ -54,7 +58,7 @@ public class Player : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name != "Scenes/Center")
         {
-            if (transform.position.y <= -7.5)
+            if (transform.position.y <= deadLevel)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }

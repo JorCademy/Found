@@ -6160,7 +6160,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.5092e-41, z: 0, w: 4.0511e-40}
+  m_BoundingSphereOverride: {x: 1.5046328e-36, y: 1.009742e-28, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7457,11 +7457,17 @@ MonoBehaviour:
   characterName: {fileID: 330712599}
   characterKit: {fileID: 662919507}
   dialogues:
-  - Hi, I'm Michael.
+  - Hi, I'm Michael, but you probably already know me..
+  - 'Namely, I''m the richest civilian in town. '
+  - You're hard at work, I see. Luckily I've retired already!
+  - O, hold up a minute. You're that poor guy who's trying to open that door!
+  - 'Normally, I don''t like others to get in my mind... '
+  - But I will make an exception for the poor.
+  - I'm so humble...
   player: {fileID: 1646001965}
-  nextLevel: 
+  nextLevel: MichaelLevel
   npcRank: 4
-  succeededLevelMessage: 
+  succeededLevelMessage: Hello, my poor friend!
 --- !u!1 &1222348618
 GameObject:
   m_ObjectHideFlags: 0
@@ -8567,6 +8573,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  deadLevel: -7.5
   extraJump: 1
   extraJumpValue: 1
 --- !u!50 &1646001967

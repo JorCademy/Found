@@ -8189,6 +8189,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  deadLevel: -7.5
   extraJump: 1
   extraJumpValue: 1
 --- !u!50 &1646001967

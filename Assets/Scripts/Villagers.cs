@@ -25,7 +25,6 @@ public class Villagers : MonoBehaviour
         startWalking = false;
 
         StartCoroutine(ToggleStartWalking());
-        
     }
 
     // Update is called once per frame

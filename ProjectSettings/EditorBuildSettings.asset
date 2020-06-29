@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MichaelLevel.unity
     guid: 19895a4ac30e6e947a0dbaf8dfa374ce
+  - enabled: 1
+    path: Assets/Scenes/BrandonLevel.unity
+    guid: c41953a60b5d2954aa562581fd62d199
+  - enabled: 1
+    path: Assets/Scenes/KylieLevel.unity
+    guid: df34694759bd05c42b2405fe59f757ee
   m_configObjects: {}

@@ -5852,10 +5852,17 @@ MonoBehaviour:
   characterKit: {fileID: 698912367}
   dialogues:
   - Hi, I'm Kylie.
+  - As you probably already know, I'm Miss Great Britain.
+  - And married to that awful man, Michael... *sigh*
+  - Shall I tell you a secret?
+  - I don't even like Michael. I just married him for his wealth.
+  - Anyways, do you need anything from me?
+  - Oh, wait, you're that guy who's trying to open that ugly door!
+  - You know what, get in my mind. You'll probably barely find anything there.
   player: {fileID: 1646001965}
-  nextLevel: 
+  nextLevel: KylieLevel
   npcRank: 5
-  succeededLevelMessage: 
+  succeededLevelMessage: Nice, you've found something in my mind after all!
 --- !u!1 &611167953
 GameObject:
   m_ObjectHideFlags: 0
@@ -8944,10 +8951,18 @@ MonoBehaviour:
   characterKit: {fileID: 241940498}
   dialogues:
   - Hello there, I'm Brandon.
+  - I don't think I've seen you here before. It's always nice to see new faces around.
+  - As you can see, I don't have a house. I'm basically bankrupt.
+  - As a kid, I would steal food from the supermarket to feed my family.
+  - However, I'm won't do that anymore. I'm glad that New Moon has given me a second
+    chance.
+  - Anyways, I hope I can help you with anything. What do you need?
+  - Oh, wow, finally someone who's trying to find the meaning of life!
+  - Get in my mind, my friend! Af course I'll help you open that door.
   player: {fileID: 1646001965}
-  nextLevel: 
+  nextLevel: BrandonLevel
   npcRank: 6
-  succeededLevelMessage: 
+  succeededLevelMessage: Very well done, my friend! My key is yours.
 --- !u!1 &1716139610
 GameObject:
   m_ObjectHideFlags: 0

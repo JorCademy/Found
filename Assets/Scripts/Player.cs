@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Making sure that the cursor isn't visible in-game
         Cursor.visible = false;
 
         extraJump = extraJumpValue;
@@ -34,18 +35,22 @@ public class Player : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
+        // Determine te direction in which the player is facing
         direction = Input.GetAxis("Horizontal");
 
+        // Setting the player speed
         Rb.velocity = new Vector2(direction * playerSpeed, Rb.velocity.y);
     }
 
     private void Update()
     {
+        // Setting the extra (double) jump
         if (isGrounded)
         {
             extraJump = 1;
         }
 
+        // Jumping mechanics
         if (Input.GetKeyDown(KeyCode.W) && extraJump > 0)
         {
             Rb.velocity = Vector2.up * jumpForce;
@@ -56,6 +61,7 @@ public class Player : MonoBehaviour
             Rb.velocity = Vector2.up * jumpForce;
         }
 
+        // Making sure whether or not the player fell off the map
         if (SceneManager.GetActiveScene().name != "Scenes/Center")
         {
             if (transform.position.y <= deadLevel)
@@ -65,6 +71,7 @@ public class Player : MonoBehaviour
         }
     }
     
+    // Loading the base scene when a key is earned
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.name == "Key")

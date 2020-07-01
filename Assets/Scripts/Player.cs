@@ -70,7 +70,7 @@ public class Player : MonoBehaviour
             }
         }
     }
-    
+
     // Loading the base scene when a key is earned
     private void OnCollisionEnter2D(Collision2D collision)
     {

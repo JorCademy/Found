@@ -19,9 +19,15 @@ public class Player : MonoBehaviour
     public int extraJump;
     public int extraJumpValue;
 
+    public bool fadeToNextLevel;
+    public string nextLevel;
+
     // Start is called before the first frame update
     void Start()
     {
+        // Setting fading to next level false as default
+        fadeToNextLevel = false;
+
         // Making sure that the cursor isn't visible in-game
         Cursor.visible = false;
 
@@ -44,6 +50,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(nextLevel);
+
         // Setting the extra (double) jump
         if (isGrounded)
         {
@@ -78,7 +86,8 @@ public class Player : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name != "Scenes/Center")
             {
-                SceneManager.LoadScene("Scenes/Center");
+                nextLevel = "Scenes/Center";
+                fadeToNextLevel = true;
             }
         }
     }

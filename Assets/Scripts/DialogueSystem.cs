@@ -19,7 +19,7 @@ public class DialogueSystem : MonoBehaviour
     private Villagers villagerScript;
     private int iterator;
     private bool readyForLevel;
-    public string nextLevel;
+    public string nextLevelName;
     private int amountOfKeys;
     public int npcRank;
     public string succeededLevelMessage;
@@ -98,7 +98,8 @@ public class DialogueSystem : MonoBehaviour
         // Making sure that the player can start the level when the conversation has taken place
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, playerPosition) < 3 && npcRank > amountOfKeys)
         {
-            SceneManager.LoadScene("Scenes/" + nextLevel);
+            playerScript.nextLevel = "Scenes/" + nextLevelName;
+            playerScript.fadeToNextLevel = true;
         }
 
         if (npcRank <= amountOfKeys)

@@ -22,6 +22,10 @@ public class Player : MonoBehaviour
     public bool fadeToNextLevel;
     public string nextLevel;
 
+    public bool stopPlayerMovement;
+    public bool finalPlayerMovement;
+    public Vector3 finalTargetPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +38,8 @@ public class Player : MonoBehaviour
         extraJump = extraJumpValue;
 
         Rb = GetComponent<Rigidbody2D>();
+
+        stopPlayerMovement = false;
     }
 
     // Update is called once per frame
@@ -50,8 +56,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(nextLevel);
-
         // Setting the extra (double) jump
         if (isGrounded)
         {
@@ -75,6 +79,27 @@ public class Player : MonoBehaviour
             if (transform.position.y <= deadLevel)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+
+        if (SceneManager.GetActiveScene().name == "FinalLevel")
+        {
+            finalPlayerMovement = gameObject.GetComponent<EndScene>().playerMovement;
+
+            if (transform.position.x >= 34f) 
+            {
+                playerSpeed = 0;
+                jumpForce = 0;
+            }
+
+            if (finalPlayerMovement)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, finalTargetPosition, 0.05f);
+            }
+
+            if (gameObject.GetComponent<EndScene>().fadeToNextLevelPlayer)
+            {
+                fadeToNextLevel = true;
             }
         }
     }

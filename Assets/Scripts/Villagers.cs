@@ -14,6 +14,8 @@ public class Villagers : MonoBehaviour
     public float minimumX;
     public float maximumX;
     public float positionX;
+    // public Vector3 targetPosition;
+    // private float targetPositionX;
 
     // Start is called before the first frame update
     void Start()

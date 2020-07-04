@@ -79,6 +79,9 @@ public class DialogueSystem : MonoBehaviour
                         playerScript.nextLevel = "Scenes/" + nextLevelName;
                     }
                 }
+            } else
+            {
+                characterKit.SetActive(false);
             }
         }
 

@@ -7931,8 +7931,13 @@ PrefabInstance:
     - target: {fileID: 7218327755329401971, guid: 1732fd08845fdfd43a2ca2a2696b8811,
         type: 3}
       propertyPath: levelToLoad
-      value: 
+      value: Center
       objectReference: {fileID: 0}
+    - target: {fileID: 7218327755329401971, guid: 1732fd08845fdfd43a2ca2a2696b8811,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1646001965}
     - target: {fileID: 7218327755329401975, guid: 1732fd08845fdfd43a2ca2a2696b8811,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8359,6 +8364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1646001965}
+  finalTargetPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1036474423
 GameObject:
   m_ObjectHideFlags: 0
@@ -11081,6 +11087,9 @@ MonoBehaviour:
   extraJumpValue: 1
   fadeToNextLevel: 0
   nextLevel: 
+  stopPlayerMovement: 0
+  finalPlayerMovement: 0
+  finalTargetPosition: {x: 0, y: 0, z: 0}
 --- !u!50 &1646001967
 Rigidbody2D:
   serializedVersion: 4

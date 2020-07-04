@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
+using Vector3 = UnityEngine.Vector3;
 
 public class EndScene : MonoBehaviour
 {
@@ -16,8 +17,7 @@ public class EndScene : MonoBehaviour
     public bool smallPause;
     public Image heartImage;
     public Canvas pauseMenuCanvas;
-
-    // public Image heart;
+    public bool fallingGround;
     public Text foundText;
 
     // Start is called before the first frame update
@@ -29,6 +29,7 @@ public class EndScene : MonoBehaviour
         playerMovement = false;
         displayTitle = false;
         smallPause = false;
+        fallingGround = false;
     }
 
     // Update is called once per frame
@@ -69,6 +70,10 @@ public class EndScene : MonoBehaviour
         yield return new WaitForSeconds(0.25f);
 
         playerMovement = true;
+
+        yield return new WaitForSeconds(3);
+
+        fallingGround = true;
 
         yield return new WaitForSeconds(3);
 

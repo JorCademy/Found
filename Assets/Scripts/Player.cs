@@ -94,7 +94,9 @@ public class Player : MonoBehaviour
 
             if (finalPlayerMovement)
             {
-                transform.position = Vector3.MoveTowards(transform.position, finalTargetPosition, 0.05f);
+                playerSpeed = 0;
+                jumpForce = 0;
+                transform.position = Vector3.MoveTowards(transform.position, finalTargetPosition, 5f  * Time.deltaTime);
             }
 
             if (gameObject.GetComponent<EndScene>().fadeToNextLevelPlayer)

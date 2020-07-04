@@ -36,7 +36,7 @@ public class Camera : MonoBehaviour
         {
             if (startTimerCamera)
             {
-                transform.position = Vector3.MoveTowards(transform.position, finalTargetPosition, 0.02f);
+                transform.position = Vector3.MoveTowards(transform.position, finalTargetPosition, 5f * Time.deltaTime);
                 startTimerCamera = false;
             }  
         }

@@ -62,7 +62,27 @@ public class DialogueSystem : MonoBehaviour
             dialogueText.text = succeededLevelMessage;
         } 
 
-        if (spacePressed == true && npcRank > amountOfKeys)
+        if (gameObject.name == "Secret Door")
+        {
+            if (amountOfKeys >= 6)
+            {
+                if (Vector2.Distance(transform.position, playerPosition) < 3)
+                {
+                    characterKit.SetActive(true);
+                    dialogueDisplayed = "Press 'E' to open the secret door.";
+                    characterName.text = gameObject.name;
+
+                    readyForLevel = true;
+
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        playerScript.nextLevel = "Scenes/" + nextLevelName;
+                    }
+                }
+            }
+        }
+
+        if (spacePressed == true && npcRank > amountOfKeys && gameObject.name != "Secret Door")
         {
             // Making sure that the player sees the dialogues
             characterKit.SetActive(true);
@@ -108,7 +128,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         // Making sure that the text disappears when there is no conversation anymore
-        if (Vector2.Distance(transform.position, playerPosition) < 3 && spacePressed == false)
+        if (Vector2.Distance(transform.position, playerPosition) < 3 && spacePressed == false && gameObject.name != "Secret Door")
         {
             // Display the name of the NPC
             characterName.text = gameObject.name;

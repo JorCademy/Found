@@ -15,9 +15,7 @@ public class LoveCharacter : MonoBehaviour
 
         if (gameObject.GetComponent<EndScene>().loveCubeMovement)
         {
-            Debug.Log("Start moving!");
-
-            transform.position = Vector3.MoveTowards(transform.position, finalTargetPosition, 0.05f);
+            transform.position = Vector3.MoveTowards(transform.position, finalTargetPosition, 5f * Time.deltaTime);
         }
     }
 }

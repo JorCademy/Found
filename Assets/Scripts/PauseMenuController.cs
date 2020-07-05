@@ -25,8 +25,6 @@ public class PauseMenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(paused);
-
         // Enable or disable pauseMenuCanvas
         if (paused == false)
         {
@@ -64,8 +62,6 @@ public class PauseMenuController : MonoBehaviour
 
     void pauseGameObjects()
     {
-        Debug.Log(paused);
-
         if (paused == true)
         {
             // Stop player movement

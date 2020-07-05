@@ -16,7 +16,7 @@ public class DialogueSystem : MonoBehaviour
     private Player playerScript;
     private string dialogueDisplayed;
     private bool spacePressed;
-    private Villagers villagerScript;
+    private NpcMovement npcScript;
     private int iterator;
     private bool readyForLevel;
     public string nextLevelName;
@@ -35,7 +35,7 @@ public class DialogueSystem : MonoBehaviour
         
         playerScript = GameObject.Find("Player").GetComponent<Player>();
         
-        villagerScript = this.GetComponent<Villagers>();
+        npcScript = GetComponent<NpcMovement>();
 
         readyForLevel = false;
     }
@@ -45,7 +45,6 @@ public class DialogueSystem : MonoBehaviour
     {
         // Receiving the amount of keys stored in memory
         amountOfKeys = PlayerPrefs.GetInt("Keys", 0);
-        Debug.Log(amountOfKeys);
 
         // Determining the player position
         playerPosition = player.transform.position;
@@ -93,7 +92,7 @@ public class DialogueSystem : MonoBehaviour
             // Making sure that the characters can't move during the conversation
             playerScript.playerSpeed = 0;
             playerScript.jumpForce = 0;
-            villagerScript.speed = 0;
+            npcScript.npcSpeed = 0;
 
             // Looping through the dialogues when space is pressed
             while (true)
@@ -163,7 +162,7 @@ public class DialogueSystem : MonoBehaviour
             // Making sure that the player and NPC can move (again)
             playerScript.playerSpeed = 10;
             playerScript.jumpForce = 10f;
-            villagerScript.speed = 100f;
+            npcScript.npcSpeed = 3f;
 
             // Toggling the 'conversation-mode'
             if (Input.GetKeyDown(KeyCode.Space))

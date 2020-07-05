@@ -1134,8 +1134,8 @@ GameObject:
   - component: {fileID: 600616218}
   - component: {fileID: 600616217}
   - component: {fileID: 600616216}
-  - component: {fileID: 600616219}
   - component: {fileID: 600616220}
+  - component: {fileID: 600616221}
   m_Layer: 0
   m_Name: Kylie
   m_TagString: Untagged
@@ -1255,22 +1255,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &600616219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600616214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a771896a54b42e4e8da378b54e3b852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  minimumX: 25.56
-  maximumX: 38.14
-  positionX: 0
 --- !u!114 &600616220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1283,20 @@ MonoBehaviour:
   nextLevelName: KylieLevel
   npcRank: 5
   succeededLevelMessage: Nice, you've found something in my mind after all!
+--- !u!114 &600616221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600616214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MIN_X: 25.56
+  MAX_X: 38.14
 --- !u!1 &611167953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1810,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &724084059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 934870928}
+    m_Modifications:
+    - target: {fileID: 6411139622080423956, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411139622080424171, guid: 1bd9e823b662799489fbbb2e253f07a7,
+        type: 3}
+      propertyPath: m_Name
+      value: KeyParticles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1bd9e823b662799489fbbb2e253f07a7, type: 3}
+--- !u!4 &724084060 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6411139622080423958, guid: 1bd9e823b662799489fbbb2e253f07a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 724084059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &743092185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,8 +1983,8 @@ GameObject:
   - component: {fileID: 850326496}
   - component: {fileID: 850326495}
   - component: {fileID: 850326494}
-  - component: {fileID: 850326497}
   - component: {fileID: 850326498}
+  - component: {fileID: 850326499}
   m_Layer: 0
   m_Name: John
   m_TagString: Untagged
@@ -2026,22 +2104,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &850326497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 850326492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a771896a54b42e4e8da378b54e3b852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  minimumX: 82.91
-  maximumX: 108.12
-  positionX: 0
 --- !u!114 &850326498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2072,6 +2134,20 @@ MonoBehaviour:
   nextLevelName: JohnLevel
   npcRank: 3
   succeededLevelMessage: Very well, kid. You've earned my key.
+--- !u!114 &850326499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850326492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MIN_X: 82.91
+  MAX_X: 108.12
 --- !u!1 &858221082
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,6 +2455,7 @@ GameObject:
   - component: {fileID: 934870928}
   - component: {fileID: 934870927}
   - component: {fileID: 934870929}
+  - component: {fileID: 934870930}
   m_Layer: 0
   m_Name: Secret Door
   m_TagString: Untagged
@@ -2448,6 +2525,7 @@ Transform:
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 485045247}
+  - {fileID: 724084060}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2471,6 +2549,21 @@ MonoBehaviour:
   nextLevelName: FinalLevel
   npcRank: 7
   succeededLevelMessage: 
+--- !u!114 &934870930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934870926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa7272a0e99e4d41a9bd51b76ebd39e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closedDoorSprite: {fileID: 21300000, guid: a6525b28f2d26f943afb847c6fd9ce7b, type: 3}
+  openedDoorSprite: {fileID: 21300000, guid: 5e59360137e9aa04ebf1ae7357fc792f, type: 3}
+  goldenKeyParticles: {fileID: 1461427628}
 --- !u!1001 &954629208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3430,8 +3523,8 @@ GameObject:
   - component: {fileID: 1221010528}
   - component: {fileID: 1221010527}
   - component: {fileID: 1221010526}
-  - component: {fileID: 1221010529}
   - component: {fileID: 1221010530}
+  - component: {fileID: 1221010531}
   m_Layer: 0
   m_Name: Michael
   m_TagString: Untagged
@@ -3551,22 +3644,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1221010529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1221010524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a771896a54b42e4e8da378b54e3b852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  minimumX: 47.15
-  maximumX: 62.48
-  positionX: 0
 --- !u!114 &1221010530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,6 +3671,20 @@ MonoBehaviour:
   nextLevelName: MichaelLevel
   npcRank: 4
   succeededLevelMessage: Hello, my poor friend!
+--- !u!114 &1221010531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221010524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MIN_X: 47.15
+  MAX_X: 62.48
 --- !u!1 &1222348618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,8 +4180,8 @@ GameObject:
   - component: {fileID: 1380143922}
   - component: {fileID: 1380143921}
   - component: {fileID: 1380143920}
-  - component: {fileID: 1380143924}
   - component: {fileID: 1380143925}
+  - component: {fileID: 1380143926}
   m_Layer: 0
   m_Name: Mayor
   m_TagString: Untagged
@@ -4210,22 +4301,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1380143924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380143919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a771896a54b42e4e8da378b54e3b852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  minimumX: 4.25
-  maximumX: 21.17
-  positionX: 0
 --- !u!114 &1380143925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4257,6 +4332,20 @@ MonoBehaviour:
   nextLevelName: MayorLevel
   npcRank: 1
   succeededLevelMessage: Good job, civilian! You've sucessfully earned my key!
+--- !u!114 &1380143926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380143919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MIN_X: 4.25
+  MAX_X: 21.17
 --- !u!1 &1419464448
 GameObject:
   m_ObjectHideFlags: 0
@@ -4626,6 +4715,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1461427628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6411139622080424171, guid: 1bd9e823b662799489fbbb2e253f07a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 724084059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1515567926
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,8 +5444,8 @@ GameObject:
   - component: {fileID: 1662803860}
   - component: {fileID: 1662803859}
   - component: {fileID: 1662803858}
-  - component: {fileID: 1662803861}
   - component: {fileID: 1662803862}
+  - component: {fileID: 1662803863}
   m_Layer: 0
   m_Name: Brandon
   m_TagString: Untagged
@@ -5470,22 +5565,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1662803861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662803856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a771896a54b42e4e8da378b54e3b852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  minimumX: -4.5
-  maximumX: 4.06
-  positionX: 0
 --- !u!114 &1662803862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5515,6 +5594,20 @@ MonoBehaviour:
   nextLevelName: BrandonLevel
   npcRank: 6
   succeededLevelMessage: Very well done, my friend! My key is yours.
+--- !u!114 &1662803863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662803856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MIN_X: -4.5
+  MAX_X: 4.06
 --- !u!1 &1716139610
 GameObject:
   m_ObjectHideFlags: 0
@@ -6165,9 +6258,9 @@ GameObject:
   - component: {fileID: 1815765720}
   - component: {fileID: 1815765723}
   - component: {fileID: 1815765722}
-  - component: {fileID: 1815765724}
   - component: {fileID: 1815765721}
   - component: {fileID: 1815765725}
+  - component: {fileID: 1815765726}
   m_Layer: 0
   m_Name: Mary
   m_TagString: Untagged
@@ -6287,22 +6380,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1815765724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815765719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a771896a54b42e4e8da378b54e3b852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  minimumX: 35.27
-  maximumX: 56.52462
-  positionX: 0
 --- !u!114 &1815765725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6329,6 +6406,20 @@ MonoBehaviour:
   nextLevelName: MaryLevel
   npcRank: 2
   succeededLevelMessage: 'Happy to see you again! '
+--- !u!114 &1815765726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815765719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MIN_X: 35.27
+  MAX_X: 56.52462
 --- !u!1 &1816496679
 GameObject:
   m_ObjectHideFlags: 0

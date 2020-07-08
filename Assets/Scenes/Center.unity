@@ -293,7 +293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 429.18744}
+  m_AnchoredPosition: {x: 555.06006, y: 479}
   m_SizeDelta: {x: 324.7, y: 174.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29836147
@@ -370,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 549.35406, y: 455.89996}
-  m_SizeDelta: {x: 335.4, y: 225.4}
+  m_AnchoredPosition: {x: 578.4, y: 498.8}
+  m_SizeDelta: {x: 390.3, y: 238.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55436504
 MonoBehaviour:
@@ -808,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 545.7906}
+  m_AnchoredPosition: {x: 555.06006, y: 595.60315}
   m_SizeDelta: {x: 324.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &330712599
@@ -1079,7 +1079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 545.7906}
+  m_AnchoredPosition: {x: 555.06006, y: 595.60315}
   m_SizeDelta: {x: 324.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504325464
@@ -1278,7 +1278,8 @@ MonoBehaviour:
   - I don't even like Michael. I just married him for his wealth.
   - Anyways, do you need anything from me?
   - Oh, wait, you're that guy who's trying to open that ugly door!
-  - You know what, get in my mind. You'll probably barely find anything there.
+  - Despite the fact that I barely know anything, I think I can tell you some things
+    about myself.
   player: {fileID: 1646001965}
   nextLevelName: KylieLevel
   npcRank: 5
@@ -1295,6 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcSpeed: 0
   MIN_X: 25.56
   MAX_X: 38.14
 --- !u!1 &611167953
@@ -1494,7 +1496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &659621540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1792,7 +1794,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.647e-42, y: 1.01e-43, z: 7.89e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.01e-43, z: NaN, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2128,8 +2130,7 @@ MonoBehaviour:
     much.
   - 'When I die, I hope I can be with her again... '
   - Let's change the subject. You're looking for my key, aren't you?
-  - You're free to get to know me a little better. Get in my mind and earn a key,
-    son.
+  - You're free to get to know me a little better. Let's have a conversation, kid...
   player: {fileID: 1646001965}
   nextLevelName: JohnLevel
   npcRank: 3
@@ -2146,6 +2147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcSpeed: 0
   MIN_X: 82.91
   MAX_X: 108.12
 --- !u!1 &858221082
@@ -2182,7 +2184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 429.18744}
+  m_AnchoredPosition: {x: 555.06006, y: 481}
   m_SizeDelta: {x: 324.7, y: 174.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858221084
@@ -2259,7 +2261,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 545.7906}
+  m_AnchoredPosition: {x: 555.06006, y: 595.60315}
   m_SizeDelta: {x: 324.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &860085503
@@ -2851,7 +2853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 545.7906}
+  m_AnchoredPosition: {x: 555.06006, y: 595.60315}
   m_SizeDelta: {x: 324.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978500146
@@ -3144,8 +3146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 549.35406, y: 455.89996}
-  m_SizeDelta: {x: 335.4, y: 225.4}
+  m_AnchoredPosition: {x: 578.4, y: 498.8}
+  m_SizeDelta: {x: 390.3, y: 238.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1055270775
 MonoBehaviour:
@@ -3391,8 +3393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 549.35406, y: 455.89996}
-  m_SizeDelta: {x: 335.4, y: 225.4}
+  m_AnchoredPosition: {x: 578.4, y: 485.1}
+  m_SizeDelta: {x: 390.3, y: 264.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127251683
 MonoBehaviour:
@@ -3664,8 +3666,8 @@ MonoBehaviour:
   - 'Namely, I''m the richest civilian in town. '
   - You're hard at work, I see. Luckily I've retired already!
   - O, hold up a minute. You're that poor guy who's trying to open that door!
-  - 'Normally, I don''t like others to get in my mind... '
-  - But I will make an exception for the poor.
+  - 'Normally, I don''t like to have a long conversation with poor people... '
+  - But I will make an exception for you...
   - I'm so humble...
   player: {fileID: 1646001965}
   nextLevelName: MichaelLevel
@@ -3683,6 +3685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcSpeed: 0
   MIN_X: 47.15
   MAX_X: 62.48
 --- !u!1 &1222348618
@@ -4324,10 +4327,10 @@ MonoBehaviour:
   - You seem to me like a curious type of person. Find out what is behind that door.
   - You can open the door when you have gathered 6 keys, which you can get from the
     local villagers of New Moon.
-  - 'Talk to them and get in their minds. Get to know about their past, intentions
-    and norms. '
-  - Then you'll get a key and when you have enough of them, you can open this door.
-  - As I am a civilian as well, you better start getting in my mind first!
+  - Just talk to them and get to know them better.
+  - If you have had a conversation with all of them, you'll have enough keys to open
+    this door.
+  - As I am a civilian as well, you might get to know me better first!
   player: {fileID: 1646001965}
   nextLevelName: MayorLevel
   npcRank: 1
@@ -4344,6 +4347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcSpeed: 0
   MIN_X: 4.25
   MAX_X: 21.17
 --- !u!1 &1419464448
@@ -4491,7 +4495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 545.7906}
+  m_AnchoredPosition: {x: 555.06006, y: 595.60315}
   m_SizeDelta: {x: 324.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430405593
@@ -4568,8 +4572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 560.6, y: 446.8}
-  m_SizeDelta: {x: 356.7, y: 242.7}
+  m_AnchoredPosition: {x: 591.4, y: 489.2}
+  m_SizeDelta: {x: 415.1, y: 256.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433899819
 MonoBehaviour:
@@ -5389,7 +5393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 545.7906}
+  m_AnchoredPosition: {x: 555.06006, y: 597.6032}
   m_SizeDelta: {x: 324.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648203698
@@ -5589,7 +5593,8 @@ MonoBehaviour:
     chance.
   - Anyways, I hope I can help you with anything. What do you need?
   - Oh, wow, finally someone who's trying to find the meaning of life!
-  - Get in my mind, my friend! Af course I'll help you open that door.
+  - Well, then. Sit down and listen carefully. Af course I'll help you open that
+    door!
   player: {fileID: 1646001965}
   nextLevelName: BrandonLevel
   npcRank: 6
@@ -5606,6 +5611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcSpeed: 0
   MIN_X: -4.5
   MAX_X: 4.06
 --- !u!1 &1716139610
@@ -5642,7 +5648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 429.18744}
+  m_AnchoredPosition: {x: 555.06006, y: 479}
   m_SizeDelta: {x: 324.7, y: 174.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716139612
@@ -5719,7 +5725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 429.18744}
+  m_AnchoredPosition: {x: 555.06006, y: 479}
   m_SizeDelta: {x: 324.7, y: 174.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726523756
@@ -6204,7 +6210,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 429.18744}
+  m_AnchoredPosition: {x: 555.06006, y: 479}
   m_SizeDelta: {x: 324.7, y: 174.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1808520408
@@ -6401,7 +6407,7 @@ MonoBehaviour:
   - 'Being outside is nice, I really need a distraction. Especially now...  '
   - 'But the thing is that I barely see anyone when I''m outdoors. '
   - Wait a minute. You're the guy who's trying to open the mysterious door, right?!
-  - No time to lose then! You can get in my mind and earn another key.
+  - Well, then. I'll tell you more about myself...
   player: {fileID: 1646001965}
   nextLevelName: MaryLevel
   npcRank: 2
@@ -6418,6 +6424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad201d890f045b746b9db19922dd528f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  npcSpeed: 0
   MIN_X: 35.27
   MAX_X: 56.52462
 --- !u!1 &1816496679
@@ -6599,7 +6606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 545.7906}
+  m_AnchoredPosition: {x: 555.06006, y: 595.60315}
   m_SizeDelta: {x: 324.7, y: 54.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1873479080
@@ -6892,8 +6899,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 549.35406, y: 455.89996}
-  m_SizeDelta: {x: 335.4, y: 225.4}
+  m_AnchoredPosition: {x: 589.2, y: 494.6}
+  m_SizeDelta: {x: 410.6, y: 250.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1882844667
 MonoBehaviour:
@@ -7046,7 +7053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 429.18744}
+  m_AnchoredPosition: {x: 555.06006, y: 479}
   m_SizeDelta: {x: 324.7, y: 174.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936957460
@@ -7188,7 +7195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2014226161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7378,8 +7385,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 549.35406, y: 455.89996}
-  m_SizeDelta: {x: 335.4, y: 225.4}
+  m_AnchoredPosition: {x: 578.4, y: 498.8}
+  m_SizeDelta: {x: 390.3, y: 238.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072173064
 MonoBehaviour:
@@ -7451,8 +7458,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 549.35406, y: 455.89996}
-  m_SizeDelta: {x: 335.4, y: 225.4}
+  m_AnchoredPosition: {x: 578.4, y: 498.8}
+  m_SizeDelta: {x: 390.3, y: 238.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072938963
 MonoBehaviour:
@@ -7524,7 +7531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555.06006, y: 429.18744}
+  m_AnchoredPosition: {x: 555.06006, y: 479}
   m_SizeDelta: {x: 324.7, y: 174.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120687907

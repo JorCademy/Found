@@ -11,7 +11,7 @@ public class MenuController : MonoBehaviour
         // Starting the game when the player pressed SPACE in the Main Menu
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("Center");
+            StartCoroutine(WaitWhenStarting());
         }
 
         // Deleting the stored memory when starting a new game
@@ -19,5 +19,11 @@ public class MenuController : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
         }
+    }
+
+    IEnumerator WaitWhenStarting()
+    {
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene("Center");
     }
 }

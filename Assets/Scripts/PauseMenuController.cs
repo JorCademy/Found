@@ -1,25 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
 {
-    private bool paused;
+    public bool paused;
     public Canvas pauseMenuCanvas;
     public GameObject player;
+    private Player playerScript;
     public ParticleSystem flyingParticles;
     private float startingPlayerSpeed;
     private float startingPlayerJumpForce;
+    public bool toStartingMenu;
 
     // Start is called before the first frame update
     void Start()
     {
+        toStartingMenu = false;
+
         // Disable the pauseMenuCanvas at the start of the scene        
         paused = false;
 
         // Get the starting playerSpeed
         startingPlayerSpeed = player.GetComponent<Player>().playerSpeed;
         startingPlayerJumpForce = player.GetComponent<Player>().jumpForce;
+
+        playerScript = player.GetComponent<Player>();
     }
 
     // Update is called once per frame
@@ -56,7 +63,18 @@ public class PauseMenuController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.C))
             {
                 paused = false;
-            } 
+            }
+            
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                toStartingMenu = true;
+                paused = false;
+            }
+        }
+
+        if (toStartingMenu == true)
+        {
+            fadeToStartingMenu();
         }
     }
 
@@ -80,5 +98,11 @@ public class PauseMenuController : MonoBehaviour
             // Restart flying particles
             flyingParticles.Play(true);
         }
+    }
+
+    void fadeToStartingMenu()
+    {
+        playerScript.nextLevel = "Scenes/StartingMenu";
+        playerScript.fadeToNextLevel = true;
     }
 }

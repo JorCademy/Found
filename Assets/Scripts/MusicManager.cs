@@ -18,16 +18,11 @@ public class MusicManager : MonoBehaviour
             DontDestroyOnLoad(audio);
             audioBegin = true;
         }
-
-        if (SceneManager.GetActiveScene().name == "FinalLevel")
-        {
-            audio.Stop();
-        }
     }
 
     private void Update()
     {
-        IEnumerator fadingSound = FadeOut(audio, 60f);
+        IEnumerator fadingSound = MusicManager.FadeOut(audio, 60f);
 
         if (PlayerPrefs.GetInt("Keys", 0) >= 6)
         {

@@ -9,6 +9,12 @@ public class MusicManager : MonoBehaviour
     new public AudioSource audio;
     public GameObject player;
     public GameObject door;
+    private EndScene endSceneScript;
+
+    private void Start()
+    {
+        endSceneScript = player.GetComponent<EndScene>();
+    }
 
     void Awake()
     {
@@ -22,14 +28,11 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
-        IEnumerator fadingSound = MusicManager.FadeOut(audio, 60f);
+        IEnumerator fadingSound = MusicManager.FadeOut(audio, 1500f);
 
-        if (PlayerPrefs.GetInt("Keys", 0) >= 6)
+        if (endSceneScript.displayTitle)
         {
-            if (Vector2.Distance(player.transform.position, door.transform.position) < 3)
-            {
-                StartCoroutine(fadingSound);
-            }
+            StartCoroutine(fadingSound);
         }
     }
 

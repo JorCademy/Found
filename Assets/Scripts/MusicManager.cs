@@ -10,10 +10,13 @@ public class MusicManager : MonoBehaviour
     public GameObject player;
     public GameObject door;
     private EndScene endSceneScript;
+    private CreditsScene creditsSceneScript;
+    public AudioSource loveMusic;
 
     private void Start()
     {
         endSceneScript = player.GetComponent<EndScene>();
+        creditsSceneScript = GetComponent<CreditsScene>();
     }
 
     void Awake()
@@ -29,8 +32,9 @@ public class MusicManager : MonoBehaviour
     private void Update()
     {
         IEnumerator fadingSound = MusicManager.FadeOut(audio, 1500f);
+        IEnumerator fadingSoundLove = MusicManager.FadeOut(loveMusic, 100f);
 
-        if (endSceneScript.displayTitle)
+        if (SceneManager.GetActiveScene().name == "FinalLevel")
         {
             StartCoroutine(fadingSound);
         }

@@ -7,20 +7,6 @@ public class CreditsSceneMusic : MonoBehaviour
     static bool audioBegin = false;
     public AudioSource loveMusic;
     public EndScene endSceneScript;
-    public CreditsScene creditsSceneScript;
-
-    void Awake()
-    {
-        if (SceneManager.GetActiveScene().name == "Credits")
-        {
-            if (!audioBegin)
-            {
-                loveMusic.Play();
-                DontDestroyOnLoad(loveMusic);
-                audioBegin = true;
-            }
-        }
-    }
 
     // Update is called once per frame
     void Update()
@@ -30,6 +16,7 @@ public class CreditsSceneMusic : MonoBehaviour
             if (!audioBegin)
             {
                 loveMusic.Play();
+                DontDestroyOnLoad(loveMusic);
                 audioBegin = true;
             }
         }
@@ -58,7 +45,5 @@ public class CreditsSceneMusic : MonoBehaviour
 
         audio.Stop();
         audio.volume = startVolume;
-
-        Destroy(audio);
     }
 }

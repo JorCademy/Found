@@ -1471,7 +1471,7 @@ MonoBehaviour:
   player: {fileID: 1646001965}
   nextLevelName: KylieLevel
   npcRank: 5
-  succeededLevelMessage: Nice, you've found something in my mind after all!
+  succeededLevelMessage: Hi, handsome!
 --- !u!114 &600616221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2325,7 +2325,7 @@ MonoBehaviour:
   player: {fileID: 1646001965}
   nextLevelName: JohnLevel
   npcRank: 3
-  succeededLevelMessage: Very well, kid. You've earned my key.
+  succeededLevelMessage: Good day, kid.
 --- !u!114 &850326499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,6 +3010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1646001965}
   finalTargetPosition: {x: 0, y: 0, z: 0}
+  finalSceneAudioSource: {fileID: 0}
 --- !u!1 &978500144
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,6 +3339,7 @@ MonoBehaviour:
   audio: {fileID: 1008530069}
   player: {fileID: 1646001965}
   door: {fileID: 934870926}
+  loveMusic: {fileID: 0}
 --- !u!1 &1034168429
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,7 +4670,7 @@ MonoBehaviour:
   player: {fileID: 1646001965}
   nextLevelName: MayorLevel
   npcRank: 1
-  succeededLevelMessage: Good job, civilian! You've sucessfully earned my key!
+  succeededLevelMessage: Hi there, civilian. Good luck opening that mysterious door!
 --- !u!114 &1380143926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5932,7 +5934,7 @@ MonoBehaviour:
   player: {fileID: 1646001965}
   nextLevelName: BrandonLevel
   npcRank: 6
-  succeededLevelMessage: Very well done, my friend! My key is yours.
+  succeededLevelMessage: Well, hello there, my friend.
 --- !u!114 &1662803863
 MonoBehaviour:
   m_ObjectHideFlags: 0

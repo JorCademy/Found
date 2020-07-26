@@ -1401,6 +1401,7 @@ MonoBehaviour:
   audio: {fileID: 336393700}
   player: {fileID: 1646001965}
   door: {fileID: 0}
+  loveMusic: {fileID: 0}
 --- !u!82 &336393700
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13714,6 +13715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1646001965}
   finalTargetPosition: {x: 0, y: 0, z: 0}
+  finalSceneAudioSource: {fileID: 0}
 --- !u!1 &1036474423
 GameObject:
   m_ObjectHideFlags: 0
@@ -15618,7 +15620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412142227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 383.21, y: 46.1, z: 1}
+  m_LocalPosition: {x: 383.52, y: 46.19, z: 1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 625733112}

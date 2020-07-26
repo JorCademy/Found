@@ -33,6 +33,15 @@ public class NpcMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Making sure that the Mayor won't move when the player has 6 keys
+        if (gameObject.name == "Mayor")
+        {
+            if (PlayerPrefs.GetInt("Keys", 0) >= 6)
+            {
+                startWalking = false;
+            }
+        }
+
         if (startWalking == false && setTimer == false)
         {
             StartCoroutine(StartWalkingTimer());

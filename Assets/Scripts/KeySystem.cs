@@ -7,12 +7,14 @@ public class KeySystem : MonoBehaviour
 {
     static int startingAmountOfKeys;
     public Text amounfOfKeysText;
+    private bool addedKey;
 
     // Start is called before the first frame update
     void Start()
     {
         // Gathering the starting amount of keys in this session 
         startingAmountOfKeys =  PlayerPrefs.GetInt("Keys", 0);
+        addedKey = false;
     }
 
     // Update is called once per frame
@@ -27,8 +29,12 @@ public class KeySystem : MonoBehaviour
         // Adding a key when colliding with one
         if (collision.collider.name == "Key")
         {
-            startingAmountOfKeys += 1;
-            PlayerPrefs.SetInt("Keys", startingAmountOfKeys);
+            if (addedKey != true)
+            {
+                startingAmountOfKeys += 1;
+                PlayerPrefs.SetInt("Keys", startingAmountOfKeys);
+                addedKey = true;
+            }
         }
     }
 }

@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Making sure that the mouse cursor isn't visible
+        Cursor.visible = false;
+
         // Setting fading to next level false as default
         fadeToNextLevel = false;
 

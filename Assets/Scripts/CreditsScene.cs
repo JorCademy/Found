@@ -6,17 +6,22 @@ using UnityEngine.SceneManagement;
 public class CreditsScene : MonoBehaviour
 {
     public Text madeByText;
+    public Text musicUsedText;
     public Text thankForPlayingText;
     public bool displayMadeByText;
+    public bool displayMusicUsedText;
     public bool displayThankForPlayingText;
     public bool switchToStartMenu;
 
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
+
         StartCoroutine(StartCredits());
 
         displayMadeByText = false;
+        displayMusicUsedText = false;
         displayThankForPlayingText = false;
         switchToStartMenu = false;
     }
@@ -27,6 +32,11 @@ public class CreditsScene : MonoBehaviour
         if (displayMadeByText)
         {
             madeByText.GetComponent<Animator>().enabled = true;
+        }
+
+        if (displayMusicUsedText)
+        {
+            musicUsedText.GetComponent<Animator>().enabled = true;
         }
 
         if (displayThankForPlayingText)
@@ -45,6 +55,10 @@ public class CreditsScene : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         displayMadeByText = true;
+
+        yield return new WaitForSeconds(6);
+
+        displayMusicUsedText = true;
 
         yield return new WaitForSeconds(6);
 

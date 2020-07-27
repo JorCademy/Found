@@ -5,12 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public AudioSource startingSound;
+
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
         // Starting the game when the player pressed SPACE in the Main Menu
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            startingSound.Play();
+
             StartCoroutine(WaitWhenStarting());
         }
 

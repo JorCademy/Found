@@ -33,6 +33,6 @@ public class MenuController : MonoBehaviour
     IEnumerator WaitWhenStarting()
     {
         yield return new WaitForSeconds(4f);
-        SceneManager.LoadScene("Center");
+        SceneManager.LoadScene("Scenes/StartingMessage");
     }
 }

@@ -21,9 +21,11 @@ public class DialogueSystem : MonoBehaviour
     private bool readyForLevel;
     public string nextLevelName;
     private int amountOfKeys;
-    public int npcRank;
     public string succeededLevelMessage;
-    
+
+    // Checking whether or not the player has played certain levels
+    private string playedLevelCheckName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +35,13 @@ public class DialogueSystem : MonoBehaviour
         
         characterKit.SetActive(false);
         
-        playerScript = GameObject.Find("Player").GetComponent<Player>();
+        playerScript = player.GetComponent<Player>();
         
         npcScript = GetComponent<NpcMovement>();
 
         readyForLevel = false;
+
+        playedLevelCheckName = "Played" + gameObject.name + "Level";
     }
 
     // Update is called once per frame
@@ -50,16 +54,13 @@ public class DialogueSystem : MonoBehaviour
         playerPosition = player.transform.position;
 
         // Making sure the text is displayed
-        if (npcRank > amountOfKeys)
+        if (PlayerPrefs.GetInt(playedLevelCheckName, 0) == 0)
         {
             dialogueText.text = dialogueDisplayed;
-        }
-
-        // Checking when space is pressed for starting conversation
-        if (npcRank <= amountOfKeys)
+        } else
         {
             dialogueText.text = succeededLevelMessage;
-        } 
+        }
 
         if (gameObject.name == "Secret Door")
         {
@@ -84,7 +85,7 @@ public class DialogueSystem : MonoBehaviour
             }
         }
 
-        if (spacePressed == true && npcRank > amountOfKeys && gameObject.name != "Secret Door")
+        if (spacePressed == true && PlayerPrefs.GetInt(playedLevelCheckName, 0) == 0 && gameObject.name != "Secret Door")
         {
             // Making sure that the player sees the dialogues
             characterKit.SetActive(true);
@@ -118,13 +119,13 @@ public class DialogueSystem : MonoBehaviour
         }
 
         // Making sure that the player can start the level when the conversation has taken place
-        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, playerPosition) < 3 && npcRank > amountOfKeys)
+        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, playerPosition) < 3 && PlayerPrefs.GetInt(playedLevelCheckName, 0) == 0)
         {
             playerScript.nextLevel = "Scenes/" + nextLevelName;
             playerScript.fadeToNextLevel = true;
         }
 
-        if (npcRank <= amountOfKeys)
+        if (PlayerPrefs.GetInt(playedLevelCheckName, 0) == 1)
         {
             spacePressed = false;
         }
@@ -138,7 +139,7 @@ public class DialogueSystem : MonoBehaviour
             iterator = 0;
 
             // Initializing the text the player sees when it is near the NPC
-            if (npcRank > amountOfKeys)
+            if (PlayerPrefs.GetInt(playedLevelCheckName, 0) == 0)
             {
                 if (readyForLevel == false)
                 {
@@ -148,11 +149,11 @@ public class DialogueSystem : MonoBehaviour
                 {
                     if (gameObject.name == "Mayor")
                     {
-                        dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in the " + gameObject.name + "'s mind.";
+                        dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to play the " + gameObject.name + "'s level.";
                     }
                     else
                     {
-                        dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to get in " + gameObject.name + "'s mind.";
+                        dialogueDisplayed = "Press Space to talk.\n\nPress 'E' to play " + gameObject.name + "'s level.";
                     }
                 }
             }

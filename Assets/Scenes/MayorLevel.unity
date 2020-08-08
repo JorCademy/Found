@@ -8052,7 +8052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d48ea25b60b486418dc142949eb38ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: ~ Mayor Level ~
+  levelName: ~ Mayor's Past ~
 --- !u!114 &1460256192
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8725,7 +8725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d48ea25b60b486418dc142949eb38ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: ~ John's Level ~
+  levelName: ~ John's Past ~
 --- !u!114 &1205394850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14607,8 +14607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paused: 0
   pauseMenuCanvas: {fileID: 1379152928}
-  player: {fileID: 0}
-  flyingParticles: {fileID: 0}
+  player: {fileID: 1646001965}
+  flyingParticles: {fileID: 344970925}
   toStartingMenu: 0
 --- !u!114 &1379152926
 MonoBehaviour:

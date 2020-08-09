@@ -5461,6 +5461,7 @@ MonoBehaviour:
   player: {fileID: 1646001965}
   door: {fileID: 0}
   loveMusic: {fileID: 0}
+  pauseMenuObject: {fileID: 1379152924}
 --- !u!82 &367926108
 AudioSource:
   m_ObjectHideFlags: 0

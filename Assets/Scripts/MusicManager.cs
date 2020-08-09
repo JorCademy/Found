@@ -12,11 +12,14 @@ public class MusicManager : MonoBehaviour
     private EndScene endSceneScript;
     private CreditsScene creditsSceneScript;
     public AudioSource loveMusic;
+    public GameObject pauseMenuObject;
+    private PauseMenuController pauseMenuScript;
 
     private void Start()
     {
         endSceneScript = player.GetComponent<EndScene>();
         creditsSceneScript = GetComponent<CreditsScene>();
+        pauseMenuScript = pauseMenuObject.GetComponent<PauseMenuController>();
     }
 
     void Awake()
@@ -31,11 +34,17 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
-        IEnumerator fadingSound = MusicManager.FadeOut(audio, 1500f);
+        IEnumerator fadingSound = FadeOut(audio, 1500f);
+        IEnumerator fadingSoundToStartMenu = FadeOut(audio, 900f);
 
         if (SceneManager.GetActiveScene().name == "FinalLevel")
         {
             StartCoroutine(fadingSound);
+        }
+        
+        if (pauseMenuScript.toStartingMenu)
+        {
+            StartCoroutine(fadingSoundToStartMenu);
         }
     }
 

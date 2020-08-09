@@ -3131,6 +3131,7 @@ MonoBehaviour:
   player: {fileID: 1646001965}
   door: {fileID: 934870926}
   loveMusic: {fileID: 0}
+  pauseMenuObject: {fileID: 659621539}
 --- !u!1 &1034168429
 GameObject:
   m_ObjectHideFlags: 0

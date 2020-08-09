@@ -64,17 +64,6 @@ public class PauseMenuController : MonoBehaviour
             {
                 paused = false;
             }
-            
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                toStartingMenu = true;
-                paused = false;
-            }
-        }
-
-        if (toStartingMenu == true)
-        {
-            fadeToStartingMenu();
         }
     }
 
@@ -98,11 +87,5 @@ public class PauseMenuController : MonoBehaviour
             // Restart flying particles
             flyingParticles.Play(true);
         }
-    }
-
-    void fadeToStartingMenu()
-    {
-        playerScript.nextLevel = "Scenes/StartingMenu";
-        playerScript.fadeToNextLevel = true;
     }
 }

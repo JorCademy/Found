@@ -445,7 +445,7 @@ MonoBehaviour:
   fadeToNextLevelPlayer: 0
   smallPause: 0
   heartImage: {fileID: 976723463}
-  pauseMenuCanvas: {fileID: 0}
+  pauseMenuCanvas: {fileID: 1661083342}
   fallingGround: 0
   foundText: {fileID: 372083533}
 --- !u!1 &344970923
@@ -5631,7 +5631,7 @@ MonoBehaviour:
   player: {fileID: 1646001965}
   door: {fileID: 934870926}
   loveMusic: {fileID: 838584085}
-  pauseMenuObject: {fileID: 0}
+  pauseMenuObject: {fileID: 1661083338}
 --- !u!82 &838584083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5873,7 +5873,7 @@ MonoBehaviour:
   fadeToNextLevelPlayer: 0
   smallPause: 0
   heartImage: {fileID: 976723463}
-  pauseMenuCanvas: {fileID: 0}
+  pauseMenuCanvas: {fileID: 1661083342}
   fallingGround: 0
   foundText: {fileID: 372083533}
 --- !u!1 &934870926
@@ -7002,7 +7002,7 @@ Transform:
   m_Children:
   - {fileID: 1857518427}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1646001971
 MonoBehaviour:
@@ -7039,7 +7039,7 @@ MonoBehaviour:
   fadeToNextLevelPlayer: 0
   smallPause: 0
   heartImage: {fileID: 976723463}
-  pauseMenuCanvas: {fileID: 0}
+  pauseMenuCanvas: {fileID: 1661083342}
   fallingGround: 0
   foundText: {fileID: 372083533}
 --- !u!1 &1661083338
@@ -7061,7 +7061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1661083339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7315,7 +7315,7 @@ MonoBehaviour:
   fadeToNextLevelPlayer: 0
   smallPause: 0
   heartImage: {fileID: 976723463}
-  pauseMenuCanvas: {fileID: 0}
+  pauseMenuCanvas: {fileID: 1661083342}
   fallingGround: 0
   foundText: {fileID: 372083533}
 --- !u!114 &1662803862
